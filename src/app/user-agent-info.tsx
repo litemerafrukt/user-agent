@@ -19,7 +19,6 @@ export default function UserAgentInfo() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // @ts-ignore: Property 'userAgentData' does not exist on type 'Navigator'
       const uaData = window.navigator.userAgentData?.platform || "Not available"
       setUserAgentData(uaData)
       setUserAgent(window.navigator.userAgent)
